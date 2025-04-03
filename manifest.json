@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Clear History on Tab Close",
+  "version": "1.0",
+  "description": "Clears browsing and search history when a tab is closed.",
+  "permissions": [
+    "browsingData",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["<all_urls>"]
+}
