@@ -5,7 +5,7 @@ A lightweight Chrome extension that keeps your browsing history and form-data su
 ## Features
 
 - Clears browsing history (`chrome.history.deleteAll()`)  
-- Removes form-data suggestions (`browsingData.remove({ history, formData })`)  
+- Removes form-data suggestions (`chrome.browsingData.remove({ since: 0 }, { history: true, formData: true })`)  
 - Toggle on/off from the popup at any time  
 - Zero console output or clutter—just pure functionality  
 
